@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zeeepiiazurecloud 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zeeepiiazurecloud
+  template:
+    metadata:
+      labels:
+        app: zeeepiiazurecloud 
+    spec:
+      containers:
+        - name: zeeepiiazurecloud 
+          image: ziedazurepetstorecr.azurecr.io/zeeepiiazurecloud
+          ports:
+          - containerPort: 80
